@@ -1,0 +1,38 @@
+<div class="page">
+    <h1 class="title">Log In</h1>
+    <div class="credentials">
+        <div class="container inputs">
+            <div class="input">
+                <app-input [type]="'email'" [placeholder]="'E-mail'"></app-input>
+            </div>
+            <div class="input">
+                <app-input [type]="'password'" [placeholder]="'Password'"></app-input>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <input type="checkbox" name="" id="">
+                <label>Remember Me?</label>
+            </div>
+            <div>
+                <a [routerLink]="'/login/new-account'">Forget password?</a>
+            </div>
+        </div>
+        <div class="container">
+            <input type="button" value="Log In with your account">
+        </div>
+    </div>
+    <div>
+        <label>Log In with</label>
+        <div>
+            <input type="button" value="Facebook">
+            <input type="button" value="Google">
+        </div>
+    </div>
+    <div>
+        <div>
+            <span>New user?</span>
+            <span>Create account</span>
+        </div>
+    </div>
+</div>

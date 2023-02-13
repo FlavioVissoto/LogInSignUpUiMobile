@@ -1,0 +1,8 @@
+$width-menu: 150px;
+$width-menu-mobile: 70%;
+$height-header: 48px;
+
+@mixin min-height-content {
+  // Remove a altura do header, altura do footer e padding do main
+  min-height: calc(100vh - $height-header * 2 - 0.5rem);
+}

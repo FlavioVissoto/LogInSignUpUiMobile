@@ -1,0 +1,44 @@
+@import './assets/scss/reset.scss';
+@import './assets/scss/main.scss';
+@import './assets/fonts/Roboto/roboto.scss';
+@import './assets/scss/scrollbar.scss';
+
+@import './assets/fontawesome/css/all.css';
+
+body {
+  font-family: 'Roboto';
+
+  * {
+    color: color(gray-700);
+  }
+  a {
+    text-decoration: none;
+  }
+  a,
+  p,
+  span,
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    box-sizing: border-box;
+  }
+}
+
+.background {
+  position: relative;
+  .circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    background: color(blue-500);
+    z-index: -9999;
+    transform: translate(-50%, -87%);
+  }
+}

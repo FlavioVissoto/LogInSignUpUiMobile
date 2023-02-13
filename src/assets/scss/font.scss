@@ -1,0 +1,36 @@
+@mixin font-size-xxs {
+  font-size: 0.5rem; /* 8px */
+  line-height: 0.75rem; /* 12px */
+}
+@mixin font-size-xs {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+}
+@mixin font-size-sm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+@mixin font-size-md {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+@mixin font-size-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+@mixin font-size-xl {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+@mixin font-size-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+@mixin font-size-3xl {
+  font-size: 1.75rem; /* 28px */
+  line-height: 2.25rem; /* 36px */
+}
+@mixin font-size-4xl {
+  font-size: 2rem; /* 32px */
+  line-height: 2.5rem; /* 40px */
+}

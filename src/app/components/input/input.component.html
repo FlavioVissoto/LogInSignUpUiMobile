@@ -1,0 +1,10 @@
+<!-- <div class="input">
+    <input type="text" name="text" spellcheck="false" required>
+    <span class="placeholder"></span>
+</div> -->
+
+<div class="input-box" [ngClass]="{'error': error}">
+    <input [type]="type" name="text" class="input" [(ngModel)]="value" [ngClass]="{'valid': value}" />
+    <span class="input-label">{{placeholder}}</span>
+    <i *ngIf="type != 'text'" [class]="'input-icon fa-solid ' + getInputTypeIcon()"></i>
+</div>
