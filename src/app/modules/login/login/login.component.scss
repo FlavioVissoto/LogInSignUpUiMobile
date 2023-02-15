@@ -1,9 +1,19 @@
 @import './../../../../assets/scss/main.scss';
 
+.logo {
+  position: relative;
+  width: 100vw;
+  height: 1px;
+  .item {
+    position: absolute;
+    left: 50%;
+    @include prefix(transform, translate(-50%, 10rem));
+  }
+}
 .page {
   display: flex;
   flex-direction: column;
-  margin-top: 170px;
+  margin-top: 17rem;
   row-gap: 1rem;
 
   .title {
@@ -28,13 +38,37 @@
     flex-direction: row;
     justify-content: space-between;
 
+    & > * {
+      padding: 0 0.5rem;
+    }
+
     .forget-password {
       @include font-size-xs;
       color: color(red-500);
     }
   }
 
-  .login{
-    
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    label {
+      width: 100%;
+      color: color(blue-500);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .item {
+        width: 40%;
+      }
+    }
+  }
+
+  .new-account {
+    margin-top: 5rem;
   }
 }

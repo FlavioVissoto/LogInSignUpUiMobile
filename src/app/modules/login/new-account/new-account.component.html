@@ -1,1 +1,31 @@
-<p>new-account works!</p>
+<div class="background"></div>
+<div class="back">
+    <i class="fa-solid fa-arrow-left" (click)="navigateLogin()"></i>
+</div>
+<div class="page">
+    <h2 class="title">Create new account</h2>
+    <div class="container credentials">
+        <div class="container inputs">
+            <div class="input">
+                <app-input [cssIcon]="'fa-user'" [type]="'text'" [name]="'name'" [placeholder]="'Name'"></app-input>
+            </div>
+            <div class="input">
+                <app-input [cssIcon]="'fa-envelope'" [type]="'email'" [placeholder]="'E-Mail'"></app-input>
+            </div>
+            <div class="input">
+                <app-input [cssIcon]="'fa-lock-keyhole'" [type]="'password'" [placeholder]="'Password'"></app-input>
+            </div>
+        </div>
+    </div>
+    <div class="container links">
+        <app-checkbox class="check" [text]="'I agree to the'"></app-checkbox>
+        <a [routerLink]="'/login/new-account'" class="therms">Term & Conditions</a>
+    </div>
+    <div class="container login">
+        <app-button [cssRounded]="'rounded-md'" [text]="'Create account'"></app-button>
+    </div>
+    <div class="container new-account">
+        <app-button [cssColor]="'white'" [cssRounded]="'rounded-md'" [text]="'Already a User? Login in'"
+            (byClick)="navigateLogin()"></app-button>
+    </div>
+</div>

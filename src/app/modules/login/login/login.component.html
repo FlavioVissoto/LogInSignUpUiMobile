@@ -1,33 +1,37 @@
-<div class="page">
+<div class="background"></div>
+<div class="logo">
+    <app-logo class="item"></app-logo>
+</div>
+<div class="page" [formGroup]="formGroup">
     <h2 class="title">Log In</h2>
     <div class="container credentials">
         <div class="container inputs">
             <div class="input">
-                <app-input [type]="'email'" [placeholder]="'E-mail'"></app-input>
+                <app-input [cssIcon]="'fa-envelope'" [placeholder]="'E-mail'" [type]="'email'"
+                    [control]="getForm('email')"></app-input>
             </div>
             <div class="input">
-                <app-input [type]="'password'" [placeholder]="'Password'"></app-input>
+                <app-input [cssIcon]="'fa-lock-keyhole'" [control]="getForm('pass')" [type]="'password'"
+                    [placeholder]="'Senha'" [text]="credentals.pass"></app-input>
             </div>
         </div>
-        <div class="container links">
-            <app-checkbox [text]="'Remember Me?'"></app-checkbox>
-            <a [routerLink]="'/login/new-account'" class="forget-password">Forget password?</a>
-        </div>
+    </div>
+    <div class="container links">
+        <app-checkbox [text]="'Lembrar senha?'"></app-checkbox>
+        <a [routerLink]="'/login/new-account'" class="forget-password">Esqueci a senha?</a>
     </div>
     <div class="container login">
-        <app-button [text]="'Log In with your account'"></app-button>
+        <app-button [cssRounded]="'rounded-md'" [text]="'Acessar'" (byClick)="login()"></app-button>
     </div>
-    <div class="container">
+    <!-- <div class="container login-buttons">
         <label>Log In with</label>
-        <div>
-            <input type="button" value="Facebook">
-            <input type="button" value="Google">
+        <div class="buttons">
+            <app-button class="item" [cssIcon]="'fa-facebook-f'" [text]="'Facebook'"></app-button>
+            <app-button class="item" [cssColor]="'red'" [cssIcon]="'fa-google-plus-g'" [text]="'Google'"></app-button>
         </div>
     </div>
-    <div class="container">
-        <div>
-            <span>New user?</span>
-            <span>Create account</span>
-        </div>
-    </div>
+    <div class="container new-account">
+        <app-button [cssColor]="'white'" [cssRounded]="'rounded-md'" [text]="'New user? Create account'"
+            (byClick)="navigateNewAccount()"></app-button>
+    </div> -->
 </div>

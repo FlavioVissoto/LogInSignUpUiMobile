@@ -1,21 +1,26 @@
 @import './../assets/scss/main.scss';
 
-.container-mobile {
-  width: 380px;
-  margin: 20px auto;
-  border: 1px solid black;
-  height: 750px;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  position: relative;
   height: 100vh;
-  overflow: hidden;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+
+  .container-mobile {
+    width: 380px;
+    height: 100vh;
+    z-index: 10;
+    overflow-y: auto;
+
+    .content-mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      position: relative;
+      overflow-x: hidden;
+
+      
+    }
+  }
 }
-
-

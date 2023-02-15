@@ -1,0 +1,83 @@
+@import './../../../../assets/scss/main.scss';
+
+.back {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  i {
+    color: color(white);
+    @include font-size-3xl;
+    cursor: pointer;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 170px;
+  row-gap: 1rem;
+
+  .title {
+    color: color(blue-500);
+    font-weight: 600;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .credentials {
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .input {
+        width: 100%;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      padding: 0 0.5rem;
+    }
+
+    .check {
+      padding-right: 3px;
+    }
+
+    .therms {
+      @include font-size-xs;
+      color: color(red-500);
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    label {
+      width: 100%;
+      color: color(blue-500);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .item {
+        width: 40%;
+      }
+    }
+  }
+
+  .new-account {
+    margin-top: 7rem;
+  }
+}

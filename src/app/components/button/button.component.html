@@ -1,6 +1,4 @@
-<button type="button" class="button blue">
-    <!-- <i class="fa-brands fa-facebook-f"></i> -->
-    <span class="text">
-        {{ text }}
-    </span>
+<button type="button" class="button" [ngClass]="[cssColor, cssRounded]" (click)="btnClick()">
+    <i *ngIf="cssIcon" class="fa-brands" [ngClass]="[cssIcon]"></i>
+    <span>{{ text }}</span>
 </button>

@@ -44,7 +44,7 @@ $default-background: color(white);
 
     &:focus,
     &:active,
-    &.valid {
+    &.hasvalue {
       & ~ .input-label {
         color: $active-color;
         top: -0.5rem;
@@ -69,10 +69,26 @@ $default-background: color(white);
     }
   }
 
+  .list-errors {
+    display: none;
+
+    .error-message {
+      display: block;
+      @include font-size-xs;
+      color: $error-color;
+      text-align: right;
+      padding-right: 1rem;
+    }
+  }
+
   &.error {
     .input-label,
     .input-icon {
       color: $error-color;
+    }
+
+    .list-errors {
+      display: block;
     }
 
     .input {

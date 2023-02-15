@@ -1,0 +1,21 @@
+@import './../../../assets/scss/main.scss';
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    @include font-size-2xl;
+    color: color(gray-600);
+    &:first-child {
+      padding-right: 0.5rem;
+    }
+    &:last-child {
+      font-family: Shrikhand;
+      border-left: solid color(gray-700, 0.5);
+      border-left-width: 1px;
+      padding-left: 0.5rem;
+    }
+  }
+}
